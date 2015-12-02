@@ -8,16 +8,17 @@
                 <% @messages.each do |message| %>
                     
                     <div class="col-sm-4">
-                        名前：
+                        名前は
                         <span class="label label-info"><%= message.name %></span>
                     </div>
                     
                     <div class="col-sm-4">
-                        年齢：
+                        年齢は
                         <%= message.age %>
                         (<%= link_to "edit" , edit_message_path(message) %>
                         <%= link_to "destroy" , message , method: :delete, data: { confirm:'削除してもよろしいでしょうか？' } %>
                         )
+                        才です。
                     </div>
                     
                     <div class="col-sm-4">
