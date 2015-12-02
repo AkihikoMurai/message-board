@@ -6,16 +6,19 @@
     <div class="pannel-body">
         
                 <% @messages.each do |message| %>
-                    <div class="col-sm-2">
+                    <div class="col-sm-4">
+                        名前：
                         <span class="label label-info"><%= message.name %></span>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-4">
+                        年齢：
                         <%= message.age %>
                         (<%= link_to "edit" , edit_message_path(message) %>
                         <%= link_to "destroy" , message , method: :delete, data: { confirm:'削除してもよろしいでしょうか？' } %>
                         )
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-4">
+                        内容：
                         <%= message.body %>
                         (<%= link_to "edit" , edit_message_path(message) %>
                         <%= link_to "destroy" , message , method: :delete, data: { confirm:'削除してもよろしいでしょうか？' } %>
